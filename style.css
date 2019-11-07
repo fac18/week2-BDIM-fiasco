@@ -5,6 +5,7 @@
   --vanilla: #BDC4A7;
   --jet: #2F2F2F;
   --cadet: #92B4A7;
+  --forest: rgb(9, 100, 76);
 /* spacing variables: golden ratio */
   --space-xs: 0.382rem;
   --space-s: 0.618rem;
@@ -68,12 +69,13 @@ main {
 
 h1 {
   color: var(--golden);
+  font-size: var(--space-xl);
 
 }
 
 h2 {
   color: var(--vanilla);
-  font-size: var(--space-m);
+  font-size: var(--space-l);
 
 }
 
@@ -100,39 +102,78 @@ li {
   padding: var(--space-l);
 }
 
+.footer {
+  position : absolute;
+  bottom : 0;
+  width: 100vw;
+}
+
 .footer > p {
   color: var(--vanilla);
   font-size: var(--space-s);
 }
 
-/* Todo Container */
-.todo-container {
+/* Todo list items */
 
+.todo-list__description {
+  font-size: var(--space-l);
 }
 
 /* Input Box */
 
 .input-box {
   border-radius: var(--space-xl);
-  min-width: 69vw;
+  min-width: 50vw;
+  height: var(--space-xl);
+  margin-left: 0rem;
+  padding: var(--space-s);
+  font-size: var(--space-l);
+  color: var(--forest);
 }
 
-/* Add Button */
+/* Buttons */
 
 .add-button {
+  color: white;
+  background-color: var(--jet);
+  border-radius: var(--space-xl);
+  margin-left: var(--space-xs);
+}
+
+.todo-list__mark {
+  color: white;
+  background-color: var(--forest);
+  border-radius: var(--space-xl);
+  margin-left: var(--space-xs);
+  width: var(--space-xl);
+  height: var(--space-l);
+}
+
+.todo-list__delete {
   color: white;
   background-color: var(--dodo);
   border-radius: var(--space-xl);
   margin-left: var(--space-xs);
-  margin-right:
+  width: var(--space-xl);
+  height: var(--space-l);
 }
 
-/* Mark Todo as Done Button */
+/* Media Queries Tablet & Desktop */
 
-.mark {
+@media (min-width: 768px) {
 
+  .dodologo {
+    width: 10.5rem;
+    right: var(--space-l);
+    top: var(--space-l);
+  }
 
+  .footer > p {
+    font-size: var(--space-m);
+  }
 }
 
-
+.input-box {
+  min-width: 70vw;
+}
 
