@@ -22,7 +22,7 @@ var todoFunctions = {
       return JSON.parse(JSON.stringify(todo));
     });
   },
- 
+
   addTodo: function(todos, newTodo) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // returns a new array, it should contain todos with the newTodo added to the end.
@@ -40,6 +40,8 @@ var todoFunctions = {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
+    let allTodos = this.cloneArrayOfObjects(todos);
+    return allTodos.filter(x => x.id != idToDelete);
   },
   markTodo: function(todos, idToMark) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
