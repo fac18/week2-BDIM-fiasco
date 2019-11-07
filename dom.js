@@ -8,9 +8,9 @@
   let addTodoButton = document.getElementById("add-todo-button");
 
   var state = [
-    { id: -3, description: "first todo" },
-    { id: -2, description: "second todo" },
-    { id: -1, description: "third todo" }
+    { id: -3, description: "Mark me complete?" },
+    { id: -2, description: "Delete me!"},
+    { id: -1, description: "I'm a todo" }
   ]; // this is our initial todoList
 
   // This function takes a todo, it returns the DOM node representing that todo
@@ -39,10 +39,11 @@
     todoNode.appendChild(markTodoButton);
 
     // add classes for css
-    todoNode.class = "todo-list__item";
-    descNode.class = 'todo-list__description';
-    deleteButtonNode.class = "todo-list__delete";
-    markTodoButton.class = "todo-list__mark";
+
+    todoNode.classList.add("todo-list__item");
+    descNode.classList.add('todo-list__description');
+    deleteButtonNode.classList.add("todo-list__delete");
+    markTodoButton.classList.add("todo-list__mark");
 
     return todoNode;
   };
@@ -57,6 +58,9 @@
       update(newState);
     });
   }
+
+  // listener to add(/remove) class to completed(/reactivated) tasks
+
 
   // you should not need to change this function
   var update = function(newState) {
