@@ -233,23 +233,30 @@ test("test original todos remains unchanged after invoking sortTodos", function(
     }
   ];
   let origTodos = todos.map(x => JSON.parse(JSON.stringify(x))); // get copy of todos
-  let result = logic.sortTodos(todos,(x,y) => y.id - x.id);
-  var actual = result;
+  var actual = logic.sortTodos(todos,(x,y) => y.id - x.id);
   var expected = origTodos;
   t.deepEquals(actual,expected, "original todos should match todos after invoking function");
   t.end();
 });
 
 // // test 2
-// test('', function(t) {
-//   var todos = [{
-//     id: 0,
-//     description: 'comet',
-//     done: false},{
-//     id: 1,
-//     description: 'asteroid',
-//     done: false}];
-//
-//     t.deepEquals(actual, expected, '');
-//     t.end();
-// });
+test('test that todos are sorted in reverse by id given appropriate function', function(t) {
+  var todos = [{
+    id: 0,
+    description: 'comet',
+    done: false
+  },{
+    id: 1,
+    description: 'asteroid',
+    done: false
+  },{
+    id: 2,
+    description: "jupiter",
+    done: true
+  }];
+let result = logic.sortTodos(todos,(x,y) => y.id - x.id);
+var actual = result[0].id;
+var expected = 2;
+    t.deepEquals(actual, expected, 'first todo should have id 2');
+    t.end();
+});
