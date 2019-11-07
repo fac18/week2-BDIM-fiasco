@@ -16,11 +16,12 @@
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
     var todoNode = document.createElement("li");
-    // you will need to use addEventListener
+    // you will need to use addEventListener - can't think what this refers to! (ignoring)
 
     // add span holding description
     let descNode = document.createElement("span");
     descNode.textContent = todo.description;
+    todoNode.appendChild(descNode);
     // this adds the delete button
     var deleteButtonNode = document.createElement("button");
     deleteButtonNode.addEventListener("click", function(event) {

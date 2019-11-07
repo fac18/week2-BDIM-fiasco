@@ -29,7 +29,6 @@ var todoFunctions = {
     newTodo.id = this.generateId(); // generate fresh id for newTodo
     newTodo.done = false;
     allTodos.push(newTodo); // add newTodo to cloned array
-    console.log("allTodos:" + JSON.stringify(allTodos));
     return allTodos;
   },
 
