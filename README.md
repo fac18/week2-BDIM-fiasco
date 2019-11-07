@@ -7,6 +7,18 @@
 * Pat [@pat-cki](https://github.com/pat-cki)
 * Dan [@plasticneuron](https://github.com/plasticneuron)
 
+## Installation
+
+To run our tests, you'll need to do the following:
+
+1. Clone the [repo](https://github.com/fac18/week2-BDIM-fiasco)
+2. `cd` into the directory
+3. run `npm install`
+
+This will install _tape_, _tap-spec_, _nodemon_ and _nyc_ as dev-dependencies, since these are listed in our `package.json` file.
+
+You can then run `npm test` to run the tests, or `npm run coverage` to run nyc alongside.
+
 ## Process
 
 This week was quite different to the last, although we were still in the same team!
