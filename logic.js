@@ -23,7 +23,9 @@ var todoFunctions = {
     });
   },
 
+
   addTodo: function (todos, newTodo) {
+
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // returns a new array, it should contain todos with the newTodo added to the end.
     // add an id to the newTodo. You can use the generateId function to create an id.
@@ -40,6 +42,8 @@ var todoFunctions = {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
+    let allTodos = this.cloneArrayOfObjects(todos);
+    return allTodos.filter(x => x.id != idToDelete);
   },
 
   markTodo: function (todos, idToMark) {
@@ -66,6 +70,9 @@ var todoFunctions = {
     // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
     // sortFunction will have same signature as the sort function in array.sort
     // hint: array.slice, array.sort
+    let allTodos = this.cloneArrayOfObjects(todos);
+    allTodos.sort(sortFunction); // sorts todos clone *in place* according to sortFunction comparison test
+    return allTodos;
   },
 };
 
