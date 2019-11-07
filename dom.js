@@ -72,6 +72,7 @@
     });
 
     // you may want to add a class for css
+    todoListNode.class = 'todo-list';
     container.replaceChild(todoListNode, container.firstChild);
   };
 
