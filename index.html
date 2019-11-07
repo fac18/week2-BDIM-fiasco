@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>tdd todo</title>
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
@@ -14,21 +16,29 @@
 </head>
 
 <body>
+
+  <div class="dogologo-container">
+    <figure  class="dodologo" alt="Dodo logo"><img src="Images/Grey Dodo Bird Illustration.svg"></figure>
+  </div>
+
   <header class="header">
     <h1>Dodo Todo</h1>
     <h2>Make your todos extinct</h2>
   </header>
 
-  <figure src="dodo.svg" class="dodologo" alt="Dodo logo">Dodo.svg</figure>
+  <main class="main">
 
-  <form id="add-todo">
-    <input type="text" name="description" value="">
-    <button type="submit" id="add-todo-button">Add</button>
+  <form class="add-todo-form" id="add-todo">
+    <input type="text" class="input-box" name="description" value="">
+    <button class="add-button" type="submit" id='add-todo-button'>Add</button>
   </form>
 
   <section class="todo-container" id="todo-container">
-    <ul class="todo-list">
-    </ul>
+    <!-- <ul class="todo-list">
+      <li><span>Bake bread</span></li>
+      <li><span>Buy milk</span></li>
+      <li><span>Clean room</span></li>
+    </ul> -->
     <!-- Stretch Goal -->
     <!-- <ul class="todo-alive">
     </ul>
@@ -36,8 +46,10 @@
     </ul> -->
   </section>
 
-  <footer class="footer">
-    Let's prevent further animal extinction. Use <a class="" aria-label="Link to Ecosia" href='https://www.ecosia.org/?c=en' target="_blank">Ecosia</a>, the search engine that plants trees.
+  </main>
+
+  <footer class="footer"><p>
+    Let's prevent further animal extinction. Use <a class="" aria-label="Link to Ecosia" href='https://www.ecosia.org/?c=en' target="_blank">Ecosia</a>, the search engine that plants trees.</p>
   </footer>
 
 </body>
