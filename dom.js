@@ -24,6 +24,7 @@
     todoNode.appendChild(descNode);
     // this adds the delete button
     var deleteButtonNode = document.createElement("button");
+    deleteButtonNode.textContent = '✘';
     deleteButtonNode.addEventListener("click", function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
@@ -32,6 +33,7 @@
 
     // add markTodo button
     var markTodoButton = document.createElement("button");
+    markTodoButton.textContent = '✓';
     markTodoButton.addEventListener("click", function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
       update(newState);
@@ -59,9 +61,6 @@
     });
   }
 
-  // listener to add(/remove) class to completed(/reactivated) tasks
-
-
   // you should not need to change this function
   var update = function(newState) {
     state = newState;
@@ -82,4 +81,20 @@
   };
 
   if (container) renderState(state);
+
+  // listener to add(/remove) class to completed(/reactivated) tasks
+  let markBoxes = [...document.querySelectorAll('.todo-list__mark')];
+  console.log(markBoxes);
+  addEventListener('click',function(event) {
+    if (markBoxes.includes(event.target)) {
+      // if (event.target.classList.contains('todo-list__item--completed')) {
+      // event.target.parentNode.classList.remove('todo-list__item--completed')
+      // } else {
+      event.target.parentNode.classList.add('todo-list__item--completed');
+      // console.log(event.target.parentNode);
+      // console.log(event.target.classList.contains('todo-list__item--completed'));
+      // };
+    };
+  })
+
 })();
