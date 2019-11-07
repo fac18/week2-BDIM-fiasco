@@ -50,7 +50,7 @@ test('test that array length has increased by 1', function(t) {
   t.end();
   });
 
-//test 2 
+//test 2
 test('check that appended element is an object', function(t) {
   var todos = [{
     id: 0,
@@ -134,4 +134,40 @@ test('test original todos remains unchanged by checking deep equality', function
 //   t.end();
 // });
 
-// //test3: 
+// //test3:
+
+
+// **deleteTodo tests**
+
+// test 1
+test('test original todos remains unchanged after invoking deleteTodo', function(t) {
+  var todos = [{
+    id: 0,
+    description: 'comet',
+    done: false},{
+    id: 1,
+    description: 'asteroid',
+    done: false}];
+  let origTodos = todos.map(x => JSON.parse(JSON.stringify(x))); // get copy of todos
+  logic.deleteTodo(todos, 1);
+  var actual = todos;
+  var expected = origTodos;
+  t.deepEquals(actual, expected, 'original todos should match todos after invoking function');
+  t.end();
+  });
+
+//test 2
+test('test that todo with given id has been removed', function(t) {
+  var todos = [{
+    id: 0,
+    description: 'comet',
+    done: false},{
+    id: 1,
+    description: 'asteroid',
+    done: false}];
+  let result = logic.deleteTodo(todos,1);
+  let actual = result.filter(x => x.id === 1);
+  let expected = [];
+  t.deepEquals(actual, expected, 'should be true that todo with id 1 is removed');
+  t.end();
+});
