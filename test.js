@@ -232,8 +232,9 @@ test("test original todos remains unchanged after invoking sortTodos", function(
       done: true
     }
   ];
-  let origTodos = todos.map(x => JSON.parse(JSON.stringify(x))); // get copy of todos
-  var actual = logic.sortTodos(todos,(x,y) => y.id - x.id);
+  let origTodos = logic.cloneArrayOfObjects(todos); // get copy of todos
+  logic.sortTodos(todos,(x,y) => y.id - x.id);
+  var actual = todos;
   var expected = origTodos;
   t.deepEquals(actual,expected, "original todos should match todos after invoking function");
   t.end();
