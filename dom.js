@@ -39,6 +39,7 @@
 
     // add classes for css
     todoNode.class = "todo-list__item";
+    descNode.class = 'todo-list__description';
     deleteButtonNode.class = "todo-list__delete";
     markTodoButton.class = "todo-list__mark";
 
@@ -48,14 +49,10 @@
   // bind create todo form
   if (addTodoForm) {
     addTodoForm.addEventListener("submit", function(event) {
-      // https://developer.mozilla.org/en-US/docs/Web/Events/submit
-      // what does event.preventDefault do?
-      // what is inside event.target?
-
-      var description = "?"; // event.target ....
-
-      // hint: todoFunctions.addTodo
-      var newState = []; // ?? change this!
+      event.preventDefault();
+      var desc = event.target.description.value;
+      let newTodo = {description: desc};
+      var newState = todoFunctions.addTodo(state,newTodo);
       update(newState);
     });
   }
