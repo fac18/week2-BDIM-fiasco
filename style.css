@@ -24,6 +24,7 @@ html {
 body {
   background-color: var(--cadet);
   box-sizing: border-box;
+  position: relative;
   /* padding: var(--space-l); */
 }
 
@@ -48,6 +49,10 @@ main {
   animation-iteration-count: infinite;
   transform-origin: bottom;
   display: inline-block;
+}
+
+.dodologo--completed {
+
 }
 
 @keyframes wobble {
@@ -122,13 +127,14 @@ li {
   font-size: var(--space-s);
 }
 
-/* Todo list items */
+/* Form and input box */
 
-.todo-list__description {
-  font-size: var(--space-l);
+.add-todo-form {
+  display: flex;
+  flex: row nowrap;
+  justify-content: left;
+  align-items: flex-start;
 }
-
-/* Input Box */
 
 .input-box {
   border-radius: var(--space-xl);
@@ -140,7 +146,7 @@ li {
   color: var(--forest);
 }
 
-/* Todo */
+/* Todo list items */
 
 .todo-list__item {
   font-size: var(--space-m);
@@ -154,6 +160,18 @@ li {
   /* color: var(--vanilla); */
 }
 
+.todo-list__description {
+  font-size: var(--space-m);
+}
+
+.todo-list__item--completed {
+
+}
+
+.todo-list__description--completed {
+
+}
+
 /* Buttons */
 
 .add-button {
@@ -162,7 +180,6 @@ li {
   border-radius: var(--space-xl);
   margin-left: var(--space-xs);
   height: 2.9rem;
-  align-items: top;
 }
 
 .add-button:hover {
@@ -190,6 +207,10 @@ li {
   background-color: var(--dodo);
 }
 
+.todo-list__mark--completed {
+
+}
+
 .todo-list__delete {
   color: white;
   background-color: var(--dodo);
@@ -203,6 +224,10 @@ li {
   background-color: var(--jet);
   transform: scale(1.1) ;
   transition: transform 0.3s ease-in-out;
+}
+
+.todo-list__delete--completed {
+
 }
 
 /* Media Queries Tablet & Desktop */
@@ -230,6 +255,11 @@ li {
   .footer > p {
     font-size: var(--space-m);
   }
+
+  .todo-list__description {
+    font-size: var(--space-l);
+  }
+
 }
 
 
@@ -237,4 +267,3 @@ li {
 .input-box {
   min-width: 70vw;
 }
-
