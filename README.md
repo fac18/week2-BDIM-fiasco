@@ -77,9 +77,7 @@ What a journey!
 
 ### Dividing functions between pairs
 
-Cut to Thursday morning. The scent of freshly brewed coffee perfumes the air. Our heroes enter, and split up for some pair programming! 
-
-
+Cut to Thursday morning. The scent of freshly brewed coffee perfumes the air. Our heroes enter, and split up for some pair programming!
 
 ### Continued specific testing/functions per pair
 
@@ -158,8 +156,10 @@ By osmosis:
 
 ## a11y
 
-We left our accessibility audit til quite late in the day, we'd want to ideally check accessibility as we went along.
+We left our accessibility audit til quite late in the day on Thursday; we'd want to ideally check accessibility as we go along.
  
 Don't forget about basic stuff: like html lang, link titles and form labels in your index.html.
+
+![](https://i.imgur.com/seWcmMg.png)
 
 
