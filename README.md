@@ -72,7 +72,7 @@ We paused writing our logic and had a little brainstorm to get an overarching se
 
 ### Css variables
 
-We used coolers to choose a colour palette, and created these as variables in our root directory.
+We used coolors to choose a colour palette, and created these as variables in our root directory.
 
 ### Mobbing semantic HTMl
 
@@ -88,7 +88,7 @@ Something for next week!
 
 ![](https://media.giphy.com/media/LVWQ9iBwkpLmU/giphy.gif)
 
-### Dom in pairs
+### DOM in pairs
 
 ![](https://i.imgur.com/GQfkHh1.jpg)
 
@@ -109,14 +109,13 @@ So, our user is some very disorganised person, who wants to be able to:
 ## Stretch goals
 
 - Sort functionality:
--   
+- Separating marked todos in another part of the webpage (alive > extinct)
 
 ## Things we learnt
 
 - How to write simple failing tests, and use these to construct functions
 - DOM!
 - The every JS array method
-- 
 
 By osmosis:
 
@@ -124,12 +123,9 @@ We're pretty much gitflow ninjas now.
 
 ## Things that went wrong
 
-- Forgettong to return something at the end of our functions and wondering why our tests weren't working. This happened more times than we'd care to admit. 
+- Forgetting to return something at the end of our functions and wondering why our tests weren't working. This happened more times than we'd care to admit. 
 
-![](https://media.giphy.com/media/HiXbqSrs6aH04/giphy.gif)
-
-
-- 
+![](https://media.giphy.com/media/HiXbqSrs6aH04/giphy.gif) 
 
 ## Auditing
 
