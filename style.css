@@ -123,12 +123,6 @@ li {
   font-size: var(--space-s);
 }
 
-/* Todo list items */
-
-.todo-list__description {
-  font-size: var(--space-l);
-}
-
 /* Input Box */
 
 .input-box {
@@ -141,7 +135,7 @@ li {
   color: var(--forest);
 }
 
-/* Todo */
+/* Todo list items */
 
 .todo-list__item {
   font-size: var(--space-m);
@@ -153,6 +147,18 @@ li {
   transform: translate(0.2rem);
   transition: transform 0.2s ease-in-out;
   /* color: var(--vanilla); */
+}
+
+.todo-list__description {
+  font-size: var(--space-m);
+}
+
+.todo-list__item--completed {
+
+}
+
+.todo-list__description--completed {
+
 }
 
 /* Buttons */
@@ -191,6 +197,10 @@ li {
   background-color: var(--dodo);
 }
 
+.todo-list__mark--completed {
+  
+}
+
 .todo-list__delete {
   color: white;
   background-color: var(--dodo);
@@ -204,6 +214,10 @@ li {
   background-color: var(--jet);
   transform: scale(1.1) ;
   transition: transform 0.3s ease-in-out;
+}
+
+.todo-list__delete--completed {
+
 }
 
 /* Media Queries Tablet & Desktop */
@@ -231,6 +245,11 @@ li {
   .footer > p {
     font-size: var(--space-m);
   }
+
+  .todo-list__description {
+    font-size: var(--space-l);
+  }
+
 }
 
 
