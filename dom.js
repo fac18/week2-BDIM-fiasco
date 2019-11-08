@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 (function() {
   var container = document.getElementById("todo-container");
   var addTodoForm = document.getElementById("add-todo");
   let addTodoButton = document.getElementById("add-todo-button");
+  let inputBox = docuemnt.querySelector('.input-box');
 
   var state = [
     { id: -3, description: "Shake tail feathers" },
@@ -12,8 +16,13 @@
 
   var createTodoNode = function(todo) {
    var todoNode = document.createElement("li");
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> master
     // span description
     let descNode = document.createElement("span");
     descNode.textContent = todo.description;
@@ -58,15 +67,22 @@
       "todo-list__item--completed"
     );
 
+    resetInput();
     return todoNode;
   };
 
   // todo form binding
   if (addTodoForm) {
-    addTodoForm.addEventListener("submit", function(event) {
+    addTodoForm.addEventListener("submit", function (event) {
       event.preventDefault();
       var desc = event.target.description.value;
+<<<<<<< HEAD
       let newTodo = { description: desc };
+=======
+      let newTodo = {
+        description: desc
+      };
+>>>>>>> master
       var newState = todoFunctions.addTodo(state, newTodo);
       update(newState);
     });
@@ -81,7 +97,7 @@
   var renderState = function(state) {
     var todoListNode = document.createElement("ul");
 
-    state.forEach(function(todo) {
+    state.forEach(function (todo) {
       todoListNode.appendChild(createTodoNode(todo));
     });
 
@@ -92,9 +108,21 @@
   if (container) renderState(state);
   let markBoxes = [...document.querySelectorAll(".todo-list__mark")];
   console.log(markBoxes);
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
   addEventListener("click", function(event) {
     if (markBoxes.includes(event.target)) {
       event.target.parentNode.classList.add("todo-list__item--completed");
     }
+<<<<<<< HEAD
   });
+=======
+  })
+
+  function resetInput() {
+    inputBox.value = '';
+  }
+>>>>>>> master
 })();
