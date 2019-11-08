@@ -51,6 +51,10 @@ main {
   display: inline-block;
 }
 
+.dodologo--completed {
+
+}
+
 @keyframes wobble {
   0% { transform: translate(0, -10px)}
  10% { transform: translate(0, -20px)}
@@ -123,7 +127,14 @@ li {
   font-size: var(--space-s);
 }
 
-/* Input Box */
+/* Form and input box */
+
+.add-todo-form {
+  display: flex;
+  flex: row nowrap;
+  justify-content: left;
+  align-items: flex-start;
+}
 
 .input-box {
   border-radius: var(--space-xl);
@@ -169,7 +180,6 @@ li {
   border-radius: var(--space-xl);
   margin-left: var(--space-xs);
   height: 2.9rem;
-  align-items: top;
 }
 
 .add-button:hover {
@@ -198,7 +208,7 @@ li {
 }
 
 .todo-list__mark--completed {
-  
+
 }
 
 .todo-list__delete {
