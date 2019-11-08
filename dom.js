@@ -2,6 +2,7 @@
   var container = document.getElementById("todo-container");
   var addTodoForm = document.getElementById("add-todo");
   let addTodoButton = document.getElementById("add-todo-button");
+  let inputBox = docuemnt.querySelector('.input-box');
 
   var state = [
     { id: -3, description: "Shake tail feathers" },
@@ -57,15 +58,18 @@
       "todo-list__item--completed"
     );
 
+    resetInput();
     return todoNode;
   };
 
   // todo form binding
   if (addTodoForm) {
-    addTodoForm.addEventListener("submit", function(event) {
+    addTodoForm.addEventListener("submit", function (event) {
       event.preventDefault();
       var desc = event.target.description.value;
-      let newTodo = { description: desc };
+      let newTodo = {
+        description: desc
+      };
       var newState = todoFunctions.addTodo(state, newTodo);
       update(newState);
     });
@@ -80,7 +84,7 @@
   var renderState = function(state) {
     var todoListNode = document.createElement("ul");
 
-    state.forEach(function(todo) {
+    state.forEach(function (todo) {
       todoListNode.appendChild(createTodoNode(todo));
     });
 
@@ -91,9 +95,14 @@
   if (container) renderState(state);
   let markBoxes = [...document.querySelectorAll(".todo-list__mark")];
   console.log(markBoxes);
+
   addEventListener("click", function(event) {
     if (markBoxes.includes(event.target)) {
       event.target.parentNode.classList.add("todo-list__item--completed");
     }
-  });
+  })
+
+  function resetInput() {
+    inputBox.value = '';
+  }
 })();
