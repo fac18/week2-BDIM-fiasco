@@ -1,61 +1,75 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dodo Todo</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="description" content="Dodo Todo app" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Dodo Todo</title>
-  <link rel="stylesheet" href="./reset.css">
-  <link rel="stylesheet" href="./style.css">
-  <meta name="description" content="Dodo Todo app">
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=McLaren&display=swap");
+    </style>
+  </head>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=McLaren&display=swap');
-  </style>
-</head>
+  <body>
+    <div class="dodologo-container">
+      <figure class="dodologo">
+        <img src="Images/Grey Dodo Bird Illustration.svg" alt="Dodo logo" />
+      </figure>
+    </div>
 
-<body>
+    <header class="header">
+      <h1>Dodo Todo</h1>
+      <h2>Make your todos extinct</h2>
+    </header>
 
-  <div class="dodologo-container">
-    <figure  class="dodologo"><img src="Images/Grey Dodo Bird Illustration.svg" alt="Dodo logo"></figure>
-  </div>
+    <main class="main">
+      <form class="add-todo-form" id="add-todo">
+        <input
+          type="text"
+          class="input-box"
+          name="description"
+          value=""
+          aria-label="type todo field"
+        />
+        <button class="add-button" type="submit" id="add-todo-button">
+          Add
+        </button>
+      </form>
 
-  <header class="header">
-    <h1>Dodo Todo</h1>
-    <h2>Make your todos extinct</h2>
-  </header>
-
-  <main class="main">
-
-  <form class="add-todo-form" id="add-todo">
-    <input type="text" class="input-box" name="description" value="" aria-label="type todo field">
-    <button class="add-button" type="submit" id='add-todo-button'>Add</button>
-  </form>
-
-  <section class="todo-container" id="todo-container">
-    <!-- <ul class="todo-list">
+      <section class="todo-container" id="todo-container">
+        <!-- <ul class="todo-list">
       <li><span>Bake bread</span></li>
       <li><span>Buy milk</span></li>
       <li><span>Clean room</span></li>
     </ul> -->
-    <!-- Stretch Goal -->
-    <!-- <ul class="todo-alive">
+        <!-- Stretch Goal -->
+        <!-- <ul class="todo-alive">
     </ul>
     <ul class="todo-extinct">
     </ul> -->
-  </section>
+      </section>
+    </main>
 
-  </main>
+    <footer class="footer">
+      <p>
+        Let's prevent further animal extinction. Use
+        <a
+          class=""
+          aria-label="Link to Ecosia"
+          href="https://www.ecosia.org/?c=en"
+          target="_blank"
+          rel="noreferrer"
+          >Ecosia</a
+        >, the search engine that plants trees.
+      </p>
 
-  <footer class="footer"><p>
-    Let's prevent further animal extinction. Use <a class="" aria-label="Link to Ecosia" href='https://www.ecosia.org/?c=en' target="_blank" rel="noreferrer">Ecosia</a>, the search engine that plants trees.</p>
-
-    <p>Built by Fiasco, 2019</p>
-  </footer>
-
-</body>
-<script type="text/javascript" src="./logic.js"></script>
-<script type="text/javascript" src="./dom.js"></script>
-
+      <p>Built by Fiasco, 2019</p>
+    </footer>
+  </body>
+  <script type="text/javascript" src="./logic.js"></script>
+  <script type="text/javascript" src="./dom.js"></script>
 </html>

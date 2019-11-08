@@ -3,8 +3,8 @@
   var addTodoForm = document.getElementById("add-todo");
   let addTodoButton = document.getElementById("add-todo-button");
   let inputBox = document.querySelector(".input-box");
-  let dodoLogo = document.querySelector('.dodologo');
-  let dodoContainer = document.querySelector('.dodologo-container');
+  let dodoLogo = document.querySelector(".dodologo");
+  let dodoContainer = document.querySelector(".dodologo-container");
 
   var state = [
     { id: -3, description: "Shake tail feathers" },
@@ -39,18 +39,16 @@
     if (todo.done == false) {
       markTodoButton.classList.remove("todo-list__mark--completed");
       descNode.classList.remove("todo-list__description--completed");
-      deleteButtonNode.classList.remove('todo-list__mark--completed');
-      todoNode.classList.remove('todo-list__item--completed');
+      deleteButtonNode.classList.remove("todo-list__mark--completed");
+      todoNode.classList.remove("todo-list__item--completed");
     }
     if (todo.done == true) {
       markTodoButton.classList.add("todo-list__mark--completed");
       descNode.classList.add("todo-list__description--completed");
-      deleteButtonNode.classList.add('todo-list__mark--completed');
-      todoNode.classList.add('todo-list__item--completed');
-      dodoLogo.classList.add("dodologo--completed");
-      dodoContainer.classList.add('dodologo-container--completed');
-      // markTodoButton.contentText = ":heavy_check_mark:";
-      // descNode.setAttribute("style", "text-decoration: line-through;");
+      deleteButtonNode.classList.add("todo-list__mark--completed");
+      todoNode.classList.add("todo-list__item--completed");
+      // dodoLogo.classList.add("dodologo--completed");
+      // dodoContainer.classList.add('dodologo-container--completed');
     }
 
     // append nodes in appropriate order
