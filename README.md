@@ -19,6 +19,28 @@ This will install _tape_, _tap-spec_, _nodemon_ and _nyc_ as dev-dependencies, s
 
 You can then run `npm test` to run the tests, or `npm run coverage` to run nyc alongside.
 
+### Learning Outcomes
+
+- [] 
+
+### User stories
+
+So, our user is some very disorganised person, who wants to be able to:
+
+- [x] enter tasks so that I don't forget them
+- [x] view the tasks I have added in a list so that I can plan my day
+- [x] mark tasks as complete so that I can focus on the tasks I have left
+- [x] the to-dos to be large enough so that I don't hit the wrong one with my thumb
+- [x] once a list item added clear the input 
+
+### Potential stretch goals
+
+As a disorganised person I want to:
+
+- [] edit my to-dos so that I can amend them if the task changes
+- [x] click on any part of a to-do to mark it as complete so that it's easier for me to check to-dos off
+- [x] a visual indication of which to-do I'm about to interact with so that it's clear what I'm editing (ISH! we didn't get to the edit stretch goal, but we added a subtle scale on hover to show which todo we're interacting with)
+
 ## Process
 
 This week was quite different to the last, although we were still in the same team! After reading the project readme, we had a little peek back at our retrospective notes, to see how we hoped to approach future projects. Some of these things were:
@@ -68,13 +90,9 @@ addTodo tests :
 * check newTodo has an id prop after appending
 * test original todos remains unchanged by checking deep equality
   
-
-
-
 ### Wire frames/design meeting
 
 We paused writing our logic and had a little brainstorm to get an overarching sense of how everything would fit together and how we wanted our Todo app to look.
-
 
 
 ![](https://i.imgur.com/Abwvlpc.jpg)
@@ -109,16 +127,6 @@ Something for next week!
 ## Tracking progress
 
 We raised issues in github from the very beginning to track all our Todos! This was a goal we'd noted last week and we're pleased to say it worked really well for us in keeping everything very visible across the team.
-
-### User stories
-
-So, our user is some very disorganised person, who wants to be able to:
-
-* enter tasks so that I don't forget them
-* view the tasks I have added in a list so that I can plan my day
-* mark tasks as complete so that I can focus on the tasks I have left
-* the to-dos to be large enough so that I don't hit the wrong one with my thumb
-* once a list item added clear the input 
 
 ## Stretch goals
 
