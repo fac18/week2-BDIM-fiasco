@@ -152,6 +152,7 @@ li {
 .footer > p {
   color: var(--vanilla);
   font-size: var(--space-s);
+  margin-top: var(--space-m);
 }
 
 /* Form and input box */
