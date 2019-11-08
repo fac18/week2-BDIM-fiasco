@@ -18,6 +18,11 @@
     // create description span
     let descNode = document.createElement("span");
     descNode.textContent = todo.description;
+    // enable marking complete by clicking list item
+    descNode.addEventListener("click", function(event) {
+      var newState = todoFunctions.markTodo(state, todo.id);
+      update(newState);
+    });
 
     // markTodo button
     var markTodoButton = document.createElement("button");
