@@ -21,7 +21,9 @@ You can then run `npm test` to run the tests, or `npm run coverage` to run nyc a
 
 ### Learning Outcomes
 
-- [] 
+- [x] Use TDD! Follow the 'red, green, refactor' cycle. Make it green then make it clean, kids!
+- [x] Become familiar with using the DOM
+- [x] Make it pretty!
 
 ### User stories
 
