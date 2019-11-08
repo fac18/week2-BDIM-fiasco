@@ -169,7 +169,7 @@ li {
 }
 
 .todo-list__description--completed {
-
+  text-decoration: line-through;
 }
 
 /* Buttons */
@@ -208,7 +208,7 @@ li {
 }
 
 .todo-list__mark--completed {
-
+  font-weight: bolder;
 }
 
 .todo-list__delete {
