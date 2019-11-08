@@ -23,9 +23,19 @@
     descNode.textContent = todo.description;
     todoNode.appendChild(descNode);
 
+
       // add markTodo button
       var markTodoButton = document.createElement("button");
       markTodoButton.textContent = '✓';
+
+      if (todo.done == false) {
+        markTodoButton.classList.remove('todo-list__item--completed')
+      }
+      if (todo.done == true) {
+        markTodoButton.classList.add('todo-list__item--completed')
+        markTodoButton.contentText = ":heavy_check_mark:";
+        descNode.setAttribute("style", "text-decoration: line-through;")
+      }
       markTodoButton.addEventListener("click", function(event) {
         var newState = todoFunctions.markTodo(state, todo.id);
         update(newState);
