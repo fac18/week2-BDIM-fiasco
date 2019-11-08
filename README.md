@@ -45,12 +45,13 @@ As a disorganised person I want to:
 
 This week was quite different to the last, although we were still in the same team! After reading the project readme, we had a little peek back at our retrospective notes, to see how we hoped to approach future projects. Some of these things were:
 
-- continue mobbing the HTML
-- switch up pairs
-- leave our comfort zones
-- continue asking for and offering help
-- ensure we all understand the codebase, even the stuff we haven't written
-- make more granular commits
+- [x] continue mobbing the HTML
+- [x] switch up pairs
+- [x] leave our comfort zones
+- [x] continue asking for and offering help
+- [x] ensure we all understand the codebase, even the stuff we haven't written
+- [] make more granular commits (SOME of us!)
+- [x] have fun! ✓✓✓✓✓✓✓✓✓
 
 ### Mobbing first tests
 
@@ -151,7 +152,14 @@ By osmosis:
 
 ![](https://media.giphy.com/media/HiXbqSrs6aH04/giphy.gif) 
 
-## Auditing
-* Don't forget about basic stuff: like html lang, link titles and form labels in your index.html.
+- Our DOM disappeared, taking all our todos with it!
+- Wrapping of todos and input - for a while they were overflowing to the next line
+- Merge conflicts: there was an instance when half a function ended up in the middle of another function. A strange quirk, but it taught us just how eagle-eyed we have to be when resolving conflicts
+
+## a11y
+
+We left our accessibility audit til quite late in the day, we'd want to ideally check accessibility as we went along.
+ 
+Don't forget about basic stuff: like html lang, link titles and form labels in your index.html.
 
 
