@@ -21,11 +21,36 @@ You can then run `npm test` to run the tests, or `npm run coverage` to run nyc a
 
 ## Process
 
-This week was quite different to the last, although we were still in the same team!
+This week was quite different to the last, although we were still in the same team! After reading the project readme, we had a little peek back at our retrospective notes, to see how we hoped to approach future projects. Some of these things were:
+
+- continue mobbing
+- leave our comfort zones
+- continue asking for and offering help
+- ensure we all understand the codebase, even the stuff we haven't written
 
 ### Mobbing first tests
 
+As TDD is still a pretty new and unfamiliar concept, we thought mobbing our first logic function together would be a great way to learn. 
+
+We really loved this approach, and even though it took the four of us 3 hours to write about 7 lines of code... 
+
+`addTodo: function (todos, newTodo) {
+    var allTodos = this.cloneArrayOfObjects(todos);
+    newTodo.id = this.generateId(); // generate fresh id for newTodo
+    newTodo.done = false;
+    allTodos.push(newTodo); // add newTodo to cloned array
+    return allTodos;
+  },`
+
+... we did write 137 lines of test on the way there. 
+
+What a journey!
+
+![What a journey!](https://media.giphy.com/media/mLugfDQ6PcCsg/giphy.gif)
+
 ### Dividing functions between pairs
+
+
 
 ### Continued specific testing/functions per pair
 
