@@ -60,6 +60,15 @@ Cut to Thursday morning. The scent of freshly brewed coffee perfumes the air. Ou
 
 ### Continued specific testing/functions per pair
 
+addTodo tests :
+* test that function appends newTodo to cloned todo array
+* test that array length has increased by 1
+* check that appended element is an object
+* test original todos remains unchanged by checking length
+* check newTodo has an id prop after appending
+* test original todos remains unchanged by checking deep equality
+  
+
 
 
 ### Wire frames/design meeting
@@ -74,7 +83,9 @@ We paused writing our logic and had a little brainstorm to get an overarching se
 
 We used coolors to choose a colour palette, and created these as variables in our root directory.
 
-### Mobbing semantic HTMl
+### Mobbing semantic HTML
+
+![](http://giphygifs.s3.amazonaws.com/media/LHZyixOnHwDDy/giphy.gif)
 
 ### Granular ~~commits~~ comets
 
@@ -103,23 +114,28 @@ We raised issues in github from the very beginning to track all our Todos! This 
 
 So, our user is some very disorganised person, who wants to be able to:
 
-- [] enter tasks into a web page in order to remember them
-- [] 
+* enter tasks so that I don't forget them
+* view the tasks I have added in a list so that I can plan my day
+* mark tasks as complete so that I can focus on the tasks I have left
+* the to-dos to be large enough so that I don't hit the wrong one with my thumb
+* once a list item added clear the input 
 
 ## Stretch goals
 
-- Sort functionality:
-- Separating marked todos in another part of the webpage (alive > extinct)
+* Sort functionality:
+* *  Separating marked todos in another part of the webpage (alive > extinct)
+* Adding animated interactions once a task completed 
 
 ## Things we learnt
 
 - How to write simple failing tests, and use these to construct functions
 - DOM!
-- The every JS array method
+- Almost every JS array method (map, every, forEach...)
+- CSS variables are great for defining colour palettes and white space
+- LET's all start CONSTantly use ES6 scoping: use const as a default, let if you are sure you need the functionality
 
 By osmosis:
-
-We're pretty much gitflow ninjas now.
+😎 We're pretty much gitflow ninjas now.
 
 ## Things that went wrong
 
@@ -128,5 +144,6 @@ We're pretty much gitflow ninjas now.
 ![](https://media.giphy.com/media/HiXbqSrs6aH04/giphy.gif) 
 
 ## Auditing
+* Don't forget about basic stuff: like html lang, link titles and form labels in your index.html.
 
-## Presentation
+
