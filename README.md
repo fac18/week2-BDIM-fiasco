@@ -1,11 +1,17 @@
-# Week 2: BDIM Fiasco
+![](https://i.imgur.com/uuEsE1k.png)
 
-## Authors
+---
+
+## Team Fiasco
 
 * Beth [@bethanyios](https://github.com/bethanyios)
 * Reda [@redahaq](https://github.com/redahaq)
 * Pat [@pat-cki](https://github.com/pat-cki)
 * Dan [@plasticneuron](https://github.com/plasticneuron)
+
+![](https://i.imgur.com/pB4hK8n.png)
+
+---
 
 ## Installation
 
@@ -19,15 +25,20 @@ This will install _tape_, _tap-spec_, _nodemon_ and _nyc_ as dev-dependencies, s
 
 You can then run `npm test` to run the tests, or `npm run coverage` to run nyc alongside.
 
+---
+
 ### Learning Outcomes
 
-- [x] Use TDD! Follow the 'red, green, refactor' cycle. Make it green then make it clean, kids!
+- [x] Use TDD! Follow the 'red, green, refactor' cycle. 
+- [x] Make it green then make it clean, kids!
 - [x] Become familiar with using the DOM
 - [x] Make it pretty!
 
+---
+
 ### User stories
 
-So, our user is some very disorganised person, who wants to be able to:
+As a disorganised person I want to:
 
 - [x] enter tasks so that I don't forget them
 - [x] view the tasks I have added in a list so that I can plan my day
@@ -35,33 +46,42 @@ So, our user is some very disorganised person, who wants to be able to:
 - [x] the to-dos to be large enough so that I don't hit the wrong one with my thumb
 - [x] once a list item added clear the input 
 
-### Potential stretch goals
+---
+
+### Let's get stretchy!
 
 As a disorganised person I want to:
 
 - [] edit my to-dos so that I can amend them if the task changes
 - [x] click on any part of a to-do to mark it as complete so that it's easier for me to check to-dos off
-- [x] a visual indication of which to-do I'm about to interact with so that it's clear what I'm editing (ISH! we didn't get to the edit stretch goal, but we added a subtle scale on hover to show which todo we're interacting with)
+- [x] a visual indication of which to-do I'm about to interact with so that it's clear what I'm editing (ISH!)
+- [ ] SUPER STRETCH: spin dodo when you complete a task
 
-## Process
+---
 
-This week was quite different to the last, although we were still in the same team! After reading the project readme, we had a little peek back at our retrospective notes, to see how we hoped to approach future projects. Some of these things were:
+## Approaching a challenging week:
+
+We turned to our retrospective notes to improve our ways of working.
 
 - [x] continue mobbing the HTML
 - [x] switch up pairs
 - [x] leave our comfort zones
 - [x] continue asking for and offering help
-- [x] ensure we all understand the codebase, even the stuff we haven't written
+- [x] ensure we all understand the codebase
 - [] make more granular commits (SOME of us!)
 - [x] have fun! ✓✓✓✓✓✓✓✓✓
 
-### Mobbing first tests
+---
+
+### Mobbing addTodo tests and function
 
 As TDD is still a pretty new and unfamiliar concept, we thought mobbing our first logic function together would be a great way to learn. 
 
 ![](https://i.imgur.com/fCTf4Rg.jpg)
 
-We really loved this approach, and even though it took the four of us 3 hours to write about 7 lines of code... 
+---
+
+We really loved this approach, and although it took the four of us 3 hours to write 7 lines of code... 
 
 `addTodo: function (todos, newTodo) {
     var allTodos = this.cloneArrayOfObjects(todos);
@@ -71,94 +91,130 @@ We really loved this approach, and even though it took the four of us 3 hours to
     return allTodos;
   },`
 
-... we did write 137 lines of test on the way there. 
+---
 
-What a journey!
+... we did write 137 lines of test code on the way. 
+
+### addTodo tests :
+1. test that function appends newTodo to cloned todo array
+2. test that array length has increased by 1
+3. check that appended element is an object
+4. test original todos remains unchanged by checking length
+5. check newTodo has an id prop after appending
+6. test original todos remains unchanged by checking deep equality
+
+---
+
+## What a journey!
 
 ![What a journey!](https://media.giphy.com/media/mLugfDQ6PcCsg/giphy.gif)
+
+---
 
 ### Dividing functions between pairs
 
 Cut to Thursday morning. The scent of freshly brewed coffee perfumes the air. Our heroes enter, and split up for some pair programming!
 
-### Continued specific testing/functions per pair
+![](https://i.imgur.com/GQfkHh1.jpg)
 
-addTodo tests :
-* test that function appends newTodo to cloned todo array
-* test that array length has increased by 1
-* check that appended element is an object
-* test original todos remains unchanged by checking length
-* check newTodo has an id prop after appending
-* test original todos remains unchanged by checking deep equality
-  
+---
+
 ### Wire frames/design meeting
 
 We paused writing our logic and had a little brainstorm to get an overarching sense of how everything would fit together and how we wanted our Todo app to look.
 
-
 ![](https://i.imgur.com/Abwvlpc.jpg)
+
+---
 
 ### Css variables
 
-We used coolors to choose a colour palette, and created these as variables in our root directory.
+We used coolors to choose a colour palette, and created these as variables in our root directory. <3
+
+![](https://i.imgur.com/nRZ3UbZ.png)
+
+---
 
 ### Mobbing semantic HTML
 
-![](http://giphygifs.s3.amazonaws.com/media/LHZyixOnHwDDy/giphy.gif)
+![](https://media.giphy.com/media/f3cuUScwgD5lv4LGKc/giphy.gif)
+
+---
 
 ### Granular ~~commits~~ comets
 
 ![](https://media.giphy.com/media/g0jidX9xXJe4jjKJTc/giphy.gif)
 
-Some of us were great at remembering to commit regularly... @Beth.
+Some of us were great at remembering to commit regularly... Beth, Dan, Pat 👏👏👏.
 
 Others, not so much... *cough* Reda *cough*. 
 
-Something for next week!
+---
+
+### Commit distribution
+
+We did, however, use the 'co-authored-by' commit trick and our commits this week are so much more balanced!
+
+![](https://i.imgur.com/4j1G28O.png)
+
+---
 
 ![](https://media.giphy.com/media/LVWQ9iBwkpLmU/giphy.gif)
 
-We did, however, use the 'co-authored-by' commit trick and our commits this week are so much more balanced!
+---
 
 ### DOM in pairs & styling in pairs
 
 We paired up again, trying to work on areas where we felt we wanted to improve, or could offer a lot of guidance to someone else.
 
-![](https://i.imgur.com/GQfkHh1.jpg)
+![](https://media.giphy.com/media/3og0IPMeREHpEV0f60/giphy.gif)
 
+---
 
 ## Tracking progress
 
 We raised issues in github from the very beginning to track all our Todos! This was a goal we'd noted last week and we're pleased to say it worked really well for us in keeping everything very visible across the team.
 
+![](https://i.imgur.com/Dz9NyXc.png)
 
+
+---
 
 ## Stretch goals
 
-* Sort functionality:
+- Sort functionality:
+- We built the function but didn't end up using it
 * *  Separating marked todos in another part of the webpage (alive > extinct)
-* Adding animated interactions once a task completed 
+- [x] Adding animated interactions once a task completed 
+
+---
 
 ## Things we learnt
 
 - How to write simple failing tests, and use these to construct functions
 - DOM!
 - Almost every JS array method (map, every, forEach...)
-- CSS variables are great for defining colour palettes and white space
-- LET's all start CONSTantly use ES6 scoping: use const as a default, let if you are sure you need the functionality
+- CSS variables are AMAZING
+- "LET's all start CONSTantly use ES6 scoping" - Jan : use const as a default, let if you are sure you need the functionality
 
-By osmosis:
-😎 We're pretty much gitflow ninjas now.
+By osmosis: 😎 We're pretty much gitflow ninjas now.
+
+---
+
+## Things that went wrong
+
+![](https://media.giphy.com/media/HiXbqSrs6aH04/giphy.gif) 
+
+---
 
 ## Things that went wrong
 
 - Forgetting to return something at the end of our functions and wondering why our tests weren't working. This happened more times than we'd care to admit. 
-
-![](https://media.giphy.com/media/HiXbqSrs6aH04/giphy.gif) 
-
-- Our DOM disappeared, taking all our todos with it!
+- Our DOM disappeared, taking all our todos!
 - Wrapping of todos and input - for a while they were overflowing to the next line
-- Merge conflicts: there was an instance when half a function ended up in the middle of another function. A strange quirk, but it taught us just how eagle-eyed we have to be when resolving conflicts
+- Weird merge conflicts: eagle-eyes necessary
+
+---
 
 ## a11y
 
@@ -167,5 +223,11 @@ We left our accessibility audit til quite late in the day on Thursday; we'd want
 Don't forget about basic stuff: like html lang, link titles and form labels in your index.html.
 
 ![](https://i.imgur.com/seWcmMg.png)
+
+---
+
+## Thanks!
+![](https://i.imgur.com/Y8aSPpU.png)
+![](https://media.giphy.com/media/3oxHQzNhcW6kUFWl3O/giphy.gif)
 
 
