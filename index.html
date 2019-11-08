@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 
 <head>
   <meta charset="utf-8">
@@ -18,7 +18,7 @@
 <body>
 
   <div class="dogologo-container">
-    <figure  class="dodologo" alt="Dodo logo"><img src="Images/Grey Dodo Bird Illustration.svg"></figure>
+    <figure  class="dodologo"><img src="Images/Grey Dodo Bird Illustration.svg" alt="Dodo logo"></figure>
   </div>
 
   <header class="header">
@@ -29,7 +29,7 @@
   <main class="main">
 
   <form class="add-todo-form" id="add-todo">
-    <input type="text" class="input-box" name="description" value="">
+    <input type="text" class="input-box" name="description" value="" aria-label="type todo field">
     <button class="add-button" type="submit" id='add-todo-button'>Add</button>
   </form>
 
@@ -49,7 +49,9 @@
   </main>
 
   <footer class="footer"><p>
-    Let's prevent further animal extinction. Use <a class="" aria-label="Link to Ecosia" href='https://www.ecosia.org/?c=en' target="_blank">Ecosia</a>, the search engine that plants trees.</p>
+    Let's prevent further animal extinction. Use <a class="" aria-label="Link to Ecosia" href='https://www.ecosia.org/?c=en' target="_blank" rel="noreferrer">Ecosia</a>, the search engine that plants trees.</p>
+
+    <p>Built by Fiasco, 2019</p>
   </footer>
 
 </body>
