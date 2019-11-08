@@ -230,4 +230,8 @@ Don't forget about basic stuff: like html lang, link titles and form labels in y
 ![](https://i.imgur.com/Y8aSPpU.png)
 ![](https://media.giphy.com/media/3oxHQzNhcW6kUFWl3O/giphy.gif)
 
+---
 
+## Stop Go Continue
+
+![stop go continue](stop-go-continue.jpg)
