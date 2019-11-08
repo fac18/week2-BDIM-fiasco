@@ -49,7 +49,7 @@ This week was quite different to the last, although we were still in the same te
 - [x] switch up pairs
 - [x] leave our comfort zones
 - [x] continue asking for and offering help
-- [] ensure we all understand the codebase, even the stuff we haven't written
+- [x] ensure we all understand the codebase, even the stuff we haven't written
 - [] make more granular commits (SOME of us!)
 - [x] have fun! ✓✓✓✓✓✓✓✓✓
 
