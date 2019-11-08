@@ -116,16 +116,20 @@ Something for next week!
 
 ![](https://media.giphy.com/media/LVWQ9iBwkpLmU/giphy.gif)
 
-### DOM in pairs
+We did, however, use the 'co-authored-by' commit trick and our commits this week are so much more balanced!
+
+### DOM in pairs & styling in pairs
+
+We paired up again, trying to work on areas where we felt we wanted to improve, or could offer a lot of guidance to someone else.
 
 ![](https://i.imgur.com/GQfkHh1.jpg)
 
 
-### Styling in pairs
-
 ## Tracking progress
 
 We raised issues in github from the very beginning to track all our Todos! This was a goal we'd noted last week and we're pleased to say it worked really well for us in keeping everything very visible across the team.
+
+
 
 ## Stretch goals
 
