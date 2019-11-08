@@ -39,7 +39,7 @@ main {
 }
 
 .dodologo {
-  width: 7rem;
+  width: 6rem;
   position: absolute;
   right: var(--space-s);
   top: var(--space-l);
@@ -108,7 +108,7 @@ main {
 
 h1 {
   color: var(--golden);
-  font-size: var(--space-xl);
+  font-size: var(--space-l);
 }
 
 h2 {
@@ -262,7 +262,7 @@ li {
 
 @media (min-width: 768px) {
   .dodologo {
-    width: 15rem;
+    width: 11rem;
     right: var(--space-l);
     top: var(--space-l);
   }
