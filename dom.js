@@ -2,7 +2,9 @@
   var container = document.getElementById("todo-container");
   var addTodoForm = document.getElementById("add-todo");
   let addTodoButton = document.getElementById("add-todo-button");
-  let inputBox = docuemnt.querySelector(".input-box");
+  let inputBox = document.querySelector(".input-box");
+  let dodoLogo = document.querySelector('.dodologo');
+  let dodoContainer = document.querySelector('.dodologo-container');
 
   var state = [
     { id: -3, description: "Shake tail feathers" },
@@ -12,52 +14,55 @@
 
   var createTodoNode = function(todo) {
     var todoNode = document.createElement("li");
-    // span description
+
+    // create description span
     let descNode = document.createElement("span");
     descNode.textContent = todo.description;
-    todoNode.appendChild(descNode);
 
     // markTodo button
     var markTodoButton = document.createElement("button");
     markTodoButton.textContent = "✓";
-
-    if (todo.done == false) {
-      markTodoButton.classList.remove("todo-list__item--completed");
-    }
-    if (todo.done == true) {
-      markTodoButton.classList.add(
-        "todo-list__item--completed",
-        "dogologo--completed"
-      );
-      markTodoButton.contentText = ":heavy_check_mark:";
-      descNode.setAttribute("style", "text-decoration: line-through;");
-    }
     markTodoButton.addEventListener("click", function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
       update(newState);
     });
-    todoNode.appendChild(markTodoButton);
 
-    // delete button
+    // create delete button
     var deleteButtonNode = document.createElement("button");
     deleteButtonNode.textContent = "✘";
     deleteButtonNode.addEventListener("click", function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
     });
+
+    // create markTodo button logic when clicked
+    if (todo.done == false) {
+      markTodoButton.classList.remove("todo-list__mark--completed");
+      descNode.classList.remove("todo-list__description--completed");
+      deleteButtonNode.classList.remove('todo-list__mark--completed');
+      todoNode.classList.remove('todo-list__item--completed');
+    }
+    if (todo.done == true) {
+      markTodoButton.classList.add("todo-list__mark--completed");
+      descNode.classList.add("todo-list__description--completed");
+      deleteButtonNode.classList.add('todo-list__mark--completed');
+      todoNode.classList.add('todo-list__item--completed');
+      dodoLogo.classList.add("dodologo--completed");
+      dodoContainer.classList.add('dodologo-container--completed');
+      // markTodoButton.contentText = ":heavy_check_mark:";
+      // descNode.setAttribute("style", "text-decoration: line-through;");
+    }
+
+    // append nodes in appropriate order
+    todoNode.appendChild(descNode);
+    todoNode.appendChild(markTodoButton);
     todoNode.appendChild(deleteButtonNode);
 
     // CSS Classes
     todoNode.classList.add("todo-list__item");
-    descNode.classList.add(
-      "todo-list__description",
-      "todo-list__item--completed"
-    );
+    descNode.classList.add("todo-list__description");
     deleteButtonNode.classList.add("todo-list__delete");
-    markTodoButton.classList.add(
-      "todo-list__mark",
-      "todo-list__item--completed"
-    );
+    markTodoButton.classList.add("todo-list__mark");
 
     resetInput();
     return todoNode;
