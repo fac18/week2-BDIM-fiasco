@@ -24,6 +24,7 @@ html {
 body {
   background-color: var(--cadet);
   box-sizing: border-box;
+  position: relative;
   /* padding: var(--space-l); */
 }
 
@@ -237,4 +238,3 @@ li {
 .input-box {
   min-width: 70vw;
 }
-
