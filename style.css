@@ -23,6 +23,7 @@ html {
 
 body {
   background-color: var(--cadet);
+  box-sizing: border-box;
   /* padding: var(--space-l); */
 }
 
@@ -34,29 +35,33 @@ main {
 
 .dodologo-container {
   position: relative;
-
 }
 
 .dodologo {
   width: 7rem;
   position: absolute;
-  right: var(--space-m);
-  top: var(--space-m);
+  right: var(--space-s);
+  top: var(--space-l);
 
   animation-name: wobble;
-  animation-duration: 5s;
+  animation-duration: 6s;
   animation-iteration-count: infinite;
-  transform-origin: 70% 70%;
+  transform-origin: bottom;
   display: inline-block;
 }
 
 @keyframes wobble {
-  0% { transform: rotate(0deg)}
- 10% { transform: rotate(-10deg)}
- 20% { transform: rotate(12deg)}
- 40% { transform: rotate(9deg)}
- 70% { transform: rotate(15deg)}
-100% { transform: rotate(0deg)}
+  0% { transform: translate(0, -10px)}
+ 10% { transform: translate(0, -20px)}
+ 20% { transform: translate(0, -10px)}
+ 30% { transform: translate(0, -20px)}
+ 40% { transform: translate(0, -10px)}
+ 50% { transform: translate(0, 20px)}
+ 60% { transform: translate(0, -10px)}
+ 70% { transform: translate(0, -20px)}
+ 80% { transform: translate(0, -10px)}
+ 90% { transform: translate(0, -20px)}
+ 100% { transform: translate(0, -10px)}
 }
 
 /* Scale up slightly on hover */
@@ -75,7 +80,7 @@ h1 {
 
 h2 {
   color: var(--vanilla);
-  font-size: var(--space-l);
+  font-size: var(--space-m);
 
 }
 
@@ -89,6 +94,10 @@ a {
 
 a:hover {
   color: white;
+}
+
+ul {
+  padding: 0;
 }
 
 li {
@@ -123,12 +132,26 @@ li {
 
 .input-box {
   border-radius: var(--space-xl);
-  min-width: 50vw;
+  max-width: 25vw;
   height: var(--space-xl);
   margin-left: 0rem;
   padding: var(--space-s);
   font-size: var(--space-l);
   color: var(--forest);
+}
+
+/* Todo */
+
+.todo-list__item {
+  font-size: var(--space-m);
+  margin-bottom: var(--space-m);
+  /* color: var(--vanilla); */
+}
+
+.todo-list__item:hover {
+  transform: translate(0.2rem);
+  transition: transform 0.2s ease-in-out;
+  /* color: var(--vanilla); */
 }
 
 /* Buttons */
@@ -138,15 +161,33 @@ li {
   background-color: var(--jet);
   border-radius: var(--space-xl);
   margin-left: var(--space-xs);
+  height: 2.9rem;
+  align-items: top;
+}
+
+.add-button:hover {
+  background-color: var(--forest);
+  transform: scale(1.01) ;
+  transition: transform 0.3s ease-in-out;
 }
 
 .todo-list__mark {
   color: white;
-  background-color: var(--forest);
+  background-color: var(--jet);
   border-radius: var(--space-xl);
   margin-left: var(--space-xs);
   width: var(--space-xl);
   height: var(--space-l);
+}
+
+.todo-list__mark:hover {
+  background-color: var(--forest);
+  transform: scale(1.1) ;
+  transition: transform 0.3s ease-in-out;
+}
+
+.todo-list__mark:visited {
+  background-color: var(--dodo);
 }
 
 .todo-list__delete {
@@ -158,20 +199,40 @@ li {
   height: var(--space-l);
 }
 
+.todo-list__delete:hover {
+  background-color: var(--jet);
+  transform: scale(1.1) ;
+  transition: transform 0.3s ease-in-out;
+}
+
 /* Media Queries Tablet & Desktop */
 
 @media (min-width: 768px) {
 
   .dodologo {
-    width: 10.5rem;
+    width: 15rem;
     right: var(--space-l);
     top: var(--space-l);
+  }
+
+  h1 {
+    font-size: var(--space-xxl);
+  }
+
+  h2 {
+    font-size: var(--space-l);
+  }
+
+  .todo-list__item {
+    font-size: var(--space-m);
   }
 
   .footer > p {
     font-size: var(--space-m);
   }
 }
+
+
 
 .input-box {
   min-width: 70vw;

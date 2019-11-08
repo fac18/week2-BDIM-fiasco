@@ -8,9 +8,9 @@
   let addTodoButton = document.getElementById("add-todo-button");
 
   var state = [
-    { id: -3, description: "Mark me complete?" },
-    { id: -2, description: "Delete me!"},
-    { id: -1, description: "I'm a todo" }
+    { id: -3, description: "Shake tail feathers" },
+    { id: -2, description: "Do a funny run"},
+    { id: -1, description: "Ask Janet for cactus" }
   ]; // this is our initial todoList
 
   // This function takes a todo, it returns the DOM node representing that todo
@@ -22,6 +22,16 @@
     let descNode = document.createElement("span");
     descNode.textContent = todo.description;
     todoNode.appendChild(descNode);
+
+      // add markTodo button
+      var markTodoButton = document.createElement("button");
+      markTodoButton.textContent = '✓';
+      markTodoButton.addEventListener("click", function(event) {
+        var newState = todoFunctions.markTodo(state, todo.id);
+        update(newState);
+      });
+      todoNode.appendChild(markTodoButton);
+
     // this adds the delete button
     var deleteButtonNode = document.createElement("button");
     deleteButtonNode.textContent = '✘';
@@ -30,15 +40,6 @@
       update(newState);
     });
     todoNode.appendChild(deleteButtonNode);
-
-    // add markTodo button
-    var markTodoButton = document.createElement("button");
-    markTodoButton.textContent = '✓';
-    markTodoButton.addEventListener("click", function(event) {
-      var newState = todoFunctions.markTodo(state, todo.id);
-      update(newState);
-    });
-    todoNode.appendChild(markTodoButton);
 
     // add classes for css
 
